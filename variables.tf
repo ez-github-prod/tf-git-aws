@@ -25,3 +25,16 @@ variable "public_subnet_cidrs" {
     "10.0.160.0/20",
   ]
 }
+
+# own remote-backend variables
+variable "backend_s3_bucket_name" {
+  description = "AWS S3 Bucket Name"
+  type        = string
+  default     = "ezc-aws-master-tfstate"
+}
+
+variable "backend_dynamodb_table_name" {
+  description = "AWS DynamoDB Table Name"
+  type        = string
+  default     = "ezc-aws-dynamodb-backend-tfstate"
+}
